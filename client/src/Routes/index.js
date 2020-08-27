@@ -2,7 +2,7 @@ import React from "react"
 import { Route, Switch, Redirect } from "react-router-dom"
 
 import {
-    Landing,
+    Landing, Login,
 } from "../Pages";
 
 const Routes = (props) => {
@@ -12,6 +12,11 @@ const Routes = (props) => {
                 exact
                 path="/"
                 component={Landing}
+            />
+            <Route
+                exact
+                path="/login"
+                component={Login}
             />
         </Switch>
     )
