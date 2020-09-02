@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Voltaire', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,11 +12,14 @@ code {
     monospace;
 }
 
-
 @font-face {
   font-family: 'Voltaire';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./components/Theme/Fonts/Voltaire-Regular.ttf') format('ttf');
+  src: url('./components/Theme/Fonts/Voltaire-Regular.ttf') format('embedded-opentype'), /* Internet Explorer */
+         url('./components/Theme/Fonts/Voltaire-Regular.ttf') format('woff2'), /* Super Modern Browsers */
+         url('./components/Theme/Fonts/Voltaire-Regular.ttf') format('woff'), /* Pretty Modern Browsers */
+         url('./components/Theme/Fonts/Voltaire-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./components/Theme/Fonts/Voltaire-Regular.ttf') format('svg');
 }
